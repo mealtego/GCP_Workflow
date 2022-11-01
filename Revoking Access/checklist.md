@@ -15,7 +15,7 @@ gcloud resource-manager <RESOURCE_TYPE> remove-iam-policy-binding 355580441671  
 
 ### **2. Rotate project credentials**
 
-* Rotate Service account keys. ==If the person whose access is being revoked was not an owner, you may skip this step==
+* Rotate Service account keys. ***If the person whose access is being revoked was not an owner, you may skip this step***
 
 ```bash=1
 #Find all **service account keys** used for specific projects
@@ -35,7 +35,7 @@ gcloud iam service-accounts keys disable KEY_ID --iam-account=SA_NAME@PROJECT_ID
 gcloud iam service-accounts keys create KEY_FILE --iam-account=SA_NAME@PROJECT_ID.iam.gserviceaccount.com 
 ```
 
-* Reset OAuth 2.0 client ID secrets. ==If the person whose access is being revoked was not an owner or editor, you may skip this step==
+* Reset OAuth 2.0 client ID secrets. ***If the person whose access is being revoked was not an owner or editor, you may skip this step***
 
 >there's no CLI command to reset OAuth client secret, so use [credentials interface](https://console.cloud.google.com/apis/credentials/) to reset it manual
 >
@@ -44,7 +44,7 @@ gcloud iam service-accounts keys create KEY_FILE --iam-account=SA_NAME@PROJECT_I
 gcloud alpha iap oauth-clients reset-secret NAME
 ```
 
-* Reset API keys. ==Any project member can see your project's API key==
+* Reset API keys. ***Any project member can see your project's API key***
 
 ```bash=1
 #List all API keys related to the specific projec
