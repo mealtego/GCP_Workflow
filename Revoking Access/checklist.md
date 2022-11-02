@@ -1,7 +1,7 @@
 
 # Check List. Revoking Access to Google Cloud Platform
 
-## According to officail [Google guidlance](https://cloud.google.com/docs/security/data-loss-prevention/revoking-user-access#revoking_access)
+## According to officail [Google guidance](https://cloud.google.com/docs/security/data-loss-prevention/revoking-user-access#revoking_access)
 
 ### **1. Remove the account from project membership**
 
