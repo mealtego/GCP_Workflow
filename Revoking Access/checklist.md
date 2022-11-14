@@ -11,6 +11,9 @@ gcloud asset search-all-iam-policies --scope=<scope-area>/ID --query="policy:fir
 
 # Remove **IAM policy** granted to the specific principal
 gcloud resource-manager <RESOURCE_TYPE> remove-iam-policy-binding 355580441671  --member=user:fired_user@example.com --role=roles/<fired_user_role>
+
+# Remove **IAM policy** granted to the specific principal
+gcloud resource-manager <RESOURCE_TYPE> remove-iam-policy-binding 355580441671  --member=user:fired_user@example.com --role=roles/<fired_user_role>
 ```
 
 ### **2. Rotate project credentials**
