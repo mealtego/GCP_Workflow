@@ -9,8 +9,8 @@
 # Find all **IAM policies** granted to the specific account
 gcloud asset search-all-iam-policies --scope=<scope-area>/ID --query="policy:fired_user@exapmle.com" --sort-by=resource --format="table(assetType, resource, policy.bindings.role[])"
 
-# Remove **IAM policy** granted to the specific principal
-gcloud resource-manager <RESOURCE_TYPE> remove-iam-policy-binding 355580441671  --member=user:fired_user@example.com --role=roles/<fired_user_role>
+# Find all asset types within the project
+gcloud asset search-all-resources --scope=<scope-area>/ID --format="table(assetType, state)"
 
 # Remove **IAM policy** granted to the specific principal
 gcloud resource-manager <RESOURCE_TYPE> remove-iam-policy-binding 355580441671  --member=user:fired_user@example.com --role=roles/<fired_user_role>
